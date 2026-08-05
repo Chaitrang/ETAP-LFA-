@@ -7,10 +7,10 @@
 # requirements-streamlit.txt   (or just rename this to requirements.txt in
 # your deployment branch/fork if the platform doesn't let you pick a name).
 
-streamlit>=1.30
-PyMuPDF>=1.24
-python-docx>=1.1
+streamlit
+PyMuPDF
+python-docx
 
 # Optional - only needed for OCR fallback on scanned/rasterized PDFs.
-pytesseract>=0.3
-Pillow>=10.0
+pytesseract
+Pillow
