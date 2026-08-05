@@ -1,12 +1,12 @@
 # Runtime dependencies
-PySide6>=6.6            # desktop GUI
-pdfplumber>=0.11        # positioned text extraction (wraps pdfminer.six)
-pdfminer.six>=20221105  # pulled in by pdfplumber; pinned explicitly for PyInstaller
-python-docx>=1.1        # Word template population
+PySide6            # desktop GUI
+pdfplumber        # positioned text extraction (wraps pdfminer.six)
+pdfminer.six  # pulled in by pdfplumber; pinned explicitly for PyInstaller
+python-docx        # Word template population
 
 # Optional
-# ocrmypdf>=15          # only needed for scanned (image-only) ETAP reports
-# pytest>=7             # to run the test suite
+# ocrmypdf          # only needed for scanned (image-only) ETAP reports
+# pytest             # to run the test suite
 
 # Build
-# pyinstaller>=6.0
+# pyinstaller
