@@ -10,3 +10,23 @@ python-docx        # Word template population
 
 # Build
 # pyinstaller
+# ---------------------------------------------------------------------------
+# Starlette pin - REQUIRED, do not relax without testing.
+#
+# Starlette 1.4.0 (released 2026-08-05 09:36 UTC) added a keyword-only argument
+# `thread_minimum_size` to GZipResponder.__init__ with no default value.
+# Streamlit's _MediaAwareGZipResponder subclasses GZipResponder and does not
+# pass it, so every request fails during ASGI startup with:
+#
+#   TypeError: GZipResponder.__init__() missing 1 required
+#              keyword-only argument: 'thread_minimum_size'
+#
+# Streamlit 1.61.0 declares only `starlette<2,>=0.46.0`, which is too loose to
+# exclude the breaking release, so the resolver picks 1.4.0, the app returns
+# 500 to health checks and never starts.
+#
+# Verified working: streamlit 1.61.0 + starlette 1.3.1.
+# Once Streamlit ships a release that passes the new argument, this pin can be
+# relaxed back to `starlette<2`.
+# ---------------------------------------------------------------------------
+starlette==1.3.1
