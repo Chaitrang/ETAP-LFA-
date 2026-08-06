@@ -1,7 +1,7 @@
 # Web / Streamlit Cloud deployment (headless - no GUI toolkit!)
-streamlit>=1.32
-pdfplumber>=0.11        # positioned text extraction (wraps pdfminer.six)
-python-docx>=1.1        # Word template population
+streamlit
+pdfplumber        # positioned text extraction (wraps pdfminer.six)
+python-docx        # Word template population
 
 # For the desktop (PySide6) build, install requirements-desktop.txt instead.
 # Do NOT add PySide6 here: Streamlit Cloud has no display and no libglib,
