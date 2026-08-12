@@ -1,0 +1,10 @@
+# Desktop application (Windows / macOS / Linux with a display)
+PySide6>=6.6            # desktop GUI
+pdfplumber>=0.11
+python-docx>=1.1
+openpyxl>=3.1
+
+# Optional
+# ocrmypdf>=15          # only needed for scanned (image-only) ETAP reports
+# pyinstaller>=6.0      # to build the executable
+# pytest>=7
